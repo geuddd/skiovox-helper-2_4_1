@@ -35,6 +35,13 @@ async function onCommand(name, currentTab) {
       openTab();
       break;
 
+case "BOOKMARK":
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.bookmarks.create({ 
+      'title': tab.title,
+      'url': tab.url
+  break;
+
     case "ACCESS_HISTORY":
       openTab(HISTORY_URL);
       break;
