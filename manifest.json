@@ -17,6 +17,9 @@
     "NEW_TAB": {
       "description": "Ctrl+T"
     },
+"CREATE_BOOKMARK": {
+      "description": "Ctrl+D"
+    },
     "CLOSE_TAB": {
       "description": "Ctrl+W"
     },
