@@ -67,8 +67,11 @@ case "BOOKMARK":
       chrome.sessions.restore();
       break;
 
-    case "NEW_WINDOW":
-      chrome.windows.create({ state: "maximized" });
+    case "BOOKMARK":
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.bookmarks.create({ 
+      'title': tab.title,
+      'url': tab.url
       break;
 
     case "NEW_INCOG_WINDOW":
